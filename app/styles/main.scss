@@ -1,9 +1,8 @@
 $icon-font-path: '../fonts/';
-@import "app/styles/bootstrap-config.scss";
-// bower:scss
+@import "app/styles/_bootstrap-config.scss";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
 
+// 浏览器升级
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -11,83 +10,62 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+// 导航菜单
+nav.navbar-default {
+  background: url(../images/nav.jpg) left top repeat-x;
+  border: 1px solid #870100;
+  padding: 0px 10px;
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 15px;
-  padding-left: 15px;
-}
+  ul.navbar-nav {
+    >li {
+      line-height: 42px;
+      >a {
+        font-size: $font-size-large;
+        color: #FFF;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 42px;
+        &:hover {
+          background: #b20000;
+          color: #fff;
+        }
+      }
+    }
 
-/* Custom page header */
-.header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
+    ul.dropdown-menu {
+      a {
+        font-size: $font-size-base;
+      }
+    }
   }
 }
-.container-narrow > hr {
-  margin: 30px 0;
-}
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
+// 内联列表
+.list-inline {
+  li {
+    padding: 0px;
+    a {
+      padding: 0 10px;
+    }
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+}
+
+// 页脚
+footer {
+  border-top: 3px #ce0b0b solid;
+  padding: 15px 0px 10px 0px;
+  font-size: $font-size-small;
+}
+
+// 卡片
+.panel-default {
+  .panel-heading {
+    border-bottom: 2px solid #ce0b0b;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+
+  .panel-body {
+    ul {
+      margin: 0;
+    }
   }
 }

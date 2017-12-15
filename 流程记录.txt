@@ -1,8 +1,4 @@
-一、样式定制
-_bootstrap-config.scss：配置bootstrap中各组件的变量
-
-
-二、使用Sass的目的
+一、使用Sass的目的
 1.复用
 	$变量: 属性值;
 	@mixin 混合器(形参);  ...  @include 混合器(实参);
@@ -16,3 +12,71 @@ _bootstrap-config.scss：配置bootstrap中各组件的变量
 3.灵活性
 	支持运算：属性值
 	提供颜色函数库
+
+
+二、样式定制
+_bootstrap-config.scss：配置bootstrap中各组件的变量
+
+三、使用bootstrap的思路
+1.特殊设置
+	支持在触屏设备上缩放：<meta name="viewport" content="width=device-width, initial-scale=1">
+	指定IE浏览器的兼容性：<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+2.布局
+	外层容器 .container
+		  行 .row      列 .col-xs-4 手机      		0 ~ 768px	 列偏移 .col-xs-offset-    向右推 col-md-push-   
+		  	 			  .col-sm-	平板		  768 ~ 992px							   向左拉 col-md-pull-
+		  	 			  .col-md-	电脑	      992 ~ 1200px
+		  	 			  .col-lg-	大型显示器	 1200 ~ max
+		浮动 .pull-left / .pull-right
+ 	清除浮动 .clearfix
+	内容居中 div .center-block
+    显示隐藏 .show / .hidden
+【一行分成12份：列+槽; 
+  最小的单元，到了大屏幕能放下，到了小屏幕就堆叠;
+  可以同时设置多个类，既适应大屏幕，又不在小屏幕中堆叠;
+  列偏移 就是空白占位符;
+  单元格里 还能嵌套行;
+  】
+
+3.排版
+	标题 h1 ... h6
+	段落 p    突出显示 .lead	对齐 text-left / right / center / justify / nowrap
+	文本
+		背景高亮 mark
+		  删除线 del
+		  下划线 ins
+		  小一号 small
+		    强调 strong
+		    斜体 em
+		    代码 code
+		用户输入 kbd
+		原样输出 pre
+		文字颜色 .text-muted / .text-primary / .text-success / .text-info / .text-warning / .text-danger
+		背景颜色 .bg-primary / .bg-success / .bg-info / .bg-warning / .bg-danger
+	列表
+			无序 ul ... li
+			有序 ol ... li
+			描述 dl ... dt ... dd
+	表格 table			条纹 .table-striped  边框 .table-bordered  悬停 .table-hover 
+			thead
+				tr ... th
+			tbody
+				tr ... td
+			tfoot
+				tr ... td
+
+	表单 form 			内联 .form-inline
+			div .form-group
+				label
+				input .form-control
+			button .submit
+			输入 input 	type = text / password / datetime / url / email / search / color / ...
+			选择 
+					单选 input .radio
+					多选 input .checkbox
+				下拉列表 select ... option
+
+	图片 img  			响应式 .img-responsive	形状 .img-rounded / .img-circle / .img-thumbnail
+
+
