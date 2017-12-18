@@ -43,10 +43,11 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- 导航菜单 -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">首页</a></li>
+            <!-- <li class="active"><a href="#">首页</a></li> -->
+            <li><a href="#">首页</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">校院概况 <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -72,13 +73,54 @@
             </li>
           </ul>
         </div>
-        <!-- /.navbar-collapse -->
+        <!-- 导航菜单 end -->
       </nav>
     </div>
   </header>
   <div class="content">
     <div class="container">
-      <div class="col-md-4">
+      <div class="col-md-5">
+        <!-- 画廊 -->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="images/slides/1.jpg" alt="...">
+              <div class="carousel-caption">
+                <p>[党校微课堂]十九大精神·民生篇之一：提高收入水平 实现共同富裕</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/slides/2.jpg" alt="...">
+              <div class="carousel-caption">
+                <p>[党校微课堂]十九大《党章》解读之二：关于基层党组织任期、作用和职责规定的新变化</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/slides/3.jpg" alt="...">
+              <div class="carousel-caption">
+                <p>[党校微课堂]十九大《党章》解读之三：关于党的建设总要求的新规定</p>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span>
+        </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+        </div>
+        <!-- 画廊 end -->
+      </div>
+      <div class="col-md-7">
+        <!-- 新闻中心 -->
+        <!-- 新闻中心 end -->
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <!-- 卡片 -->
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">教学工作 <small class="pull-right"><a href="#" target="_blank">更多...</a></small></h3>
@@ -95,8 +137,10 @@
             </ul>
           </div>
         </div>
+        <!-- 卡片 end -->
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-6">
+        <!-- 卡片 -->
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">科研工作 <small class="pull-right"><a href="#" target="_blank">更多...</a></small></h3>
@@ -113,8 +157,10 @@
             </ul>
           </div>
         </div>
+        <!-- 卡片 end -->
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-6">
+        <!-- 卡片 -->
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">通知公告 <small class="pull-right"><a href="#" target="_blank">更多...</a></small></h3>
@@ -131,41 +177,42 @@
             </ul>
           </div>
         </div>
+        <!-- 卡片 end -->
       </div>
-    </div>
-    <div class="container">
-      <!--友情链接-->
-      <div class="col-lg-1 col-md-2 col-sm-2 col-xs-4"><img src="/images/yqlj.png" width="89" height="25"></div>
-      <div class="col-lg-11 col-md-10 col-sm-10 col-xs-8">
-        <ul class="list-inline">
-          <li><a href="http://www.ccps.gov.cn/" target="_blank">中共中央党校</a>|</li>
-          <li><a href="http://www.nsa.gov.cn/web/index.php" target="_blank">国家行政学院</a>|</li>
-          <li><a href="http://www.zysy.org.cn/portal/index.htm" target="_blank">中央社会主义学院</a>|</li>
-          <li><a href="http://www.shxdx.com/foreground/index.action" target="_blank">陕西省委党校</a>|</li>
-          <li><a href="http://www.sxxzxy.com/" target="_blank">陕西省行政学院</a>|</li>
-          <li><a href="http://www.shxsy.org/" target="_blank">陕西社会主义学院</a>|</li>
-          <li><a href="http://www.xa.gov.cn/ptl/index.html" target="_blank">西安市人民政府</a>|</li>
-          <li><a href="http://www.xasw.gov.cn/" target="_blank">中共西安市委员会</a>|</li>
-          <li><a href="http://www.gbjy.sn.cn/" target="_blank">西安市干部教育在线</a>|</li>
-          <li><a href="http://www.gzswdx.gov.cn/" target="_blank">中共广州市委党校</a>|</li>
-          <li><a href="http://www.whdx.gov.cn/" target="_blank">中共武汉市委党校</a>|</li>
-          <li><a href="http://www.hrbps.gov.cn/" target="_blank">中共哈尔滨市委党校</a>|</li>
-          <li><a href="http://www.zgsyswdx.com/" target="_blank">中共沈阳市委党校</a>|</li>
-          <li><a href="http://www.cddx.gov.cn/" target="_blank">中共成都市委党校</a>|</li>
-          <li><a href="http://dx.nanjing.gov.cn/" target="_blank">中共南京市委党校</a>|</li>
-          <li><a href="http://www.ccdx.org.cn/" target="_blank">中共长春市委党校</a>|</li>
-          <li><a href="http://www.jndx.gov.cn" target="_blank">中共济南市委党校</a>|</li>
-          <li><a href="http://www.zhdx.gov.cn" target="_blank">中共杭州市委党校</a>|</li>
-          <li><a href="http://www.swdx.dl.gov.cn/" target="_blank">中共大连市委党校</a>|</li>
-          <li><a href="http://www.qddx.gov.cn" target="_blank">青岛市委党校</a>|</li>
-          <li><a href="http://www.szps.gov.cn" target="_blank">深圳市委党校</a>|</li>
-          <li><a href="http://www.xmdx.gov.cn/" target="_blank">厦门市委党校</a>|</li>
-          <li><a href="http://www.nbdx.cn/" target="_blank">宁波市委党校</a>|</li>
-        </ul>
-      </div>
-      <!--友情链接 end-->
     </div>
   </div>
+  <!--友情链接-->
+  <div class="container">
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-4"><img src="/images/yqlj.png" width="89" height="25"></div>
+    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-8">
+      <ul class="list-inline">
+        <li><a href="http://www.ccps.gov.cn/" target="_blank">中共中央党校</a>|</li>
+        <li><a href="http://www.nsa.gov.cn/web/index.php" target="_blank">国家行政学院</a>|</li>
+        <li><a href="http://www.zysy.org.cn/portal/index.htm" target="_blank">中央社会主义学院</a>|</li>
+        <li><a href="http://www.shxdx.com/foreground/index.action" target="_blank">陕西省委党校</a>|</li>
+        <li><a href="http://www.sxxzxy.com/" target="_blank">陕西省行政学院</a>|</li>
+        <li><a href="http://www.shxsy.org/" target="_blank">陕西社会主义学院</a>|</li>
+        <li><a href="http://www.xa.gov.cn/ptl/index.html" target="_blank">西安市人民政府</a>|</li>
+        <li><a href="http://www.xasw.gov.cn/" target="_blank">中共西安市委员会</a>|</li>
+        <li><a href="http://www.gbjy.sn.cn/" target="_blank">西安市干部教育在线</a>|</li>
+        <li><a href="http://www.gzswdx.gov.cn/" target="_blank">中共广州市委党校</a>|</li>
+        <li><a href="http://www.whdx.gov.cn/" target="_blank">中共武汉市委党校</a>|</li>
+        <li><a href="http://www.hrbps.gov.cn/" target="_blank">中共哈尔滨市委党校</a>|</li>
+        <li><a href="http://www.zgsyswdx.com/" target="_blank">中共沈阳市委党校</a>|</li>
+        <li><a href="http://www.cddx.gov.cn/" target="_blank">中共成都市委党校</a>|</li>
+        <li><a href="http://dx.nanjing.gov.cn/" target="_blank">中共南京市委党校</a>|</li>
+        <li><a href="http://www.ccdx.org.cn/" target="_blank">中共长春市委党校</a>|</li>
+        <li><a href="http://www.jndx.gov.cn" target="_blank">中共济南市委党校</a>|</li>
+        <li><a href="http://www.zhdx.gov.cn" target="_blank">中共杭州市委党校</a>|</li>
+        <li><a href="http://www.swdx.dl.gov.cn/" target="_blank">中共大连市委党校</a>|</li>
+        <li><a href="http://www.qddx.gov.cn" target="_blank">青岛市委党校</a>|</li>
+        <li><a href="http://www.szps.gov.cn" target="_blank">深圳市委党校</a>|</li>
+        <li><a href="http://www.xmdx.gov.cn/" target="_blank">厦门市委党校</a>|</li>
+        <li><a href="http://www.nbdx.cn/" target="_blank">宁波市委党校</a>|</li>
+      </ul>
+    </div>
+  </div>
+  <!--友情链接 end-->
   <footer>
     <div class="container">
       <p class="text-center">通信地址：陕西省西安市西影路568号　陕ICP098765备案号</p>

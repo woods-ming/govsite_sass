@@ -63,7 +63,7 @@ gulp.task('html', ['styles', 'scripts'], () => {
       minifyCSS: true,
       minifyJS: {compress: {drop_console: true}},
       processConditionalComments: true,
-      removeComments: true,
+      removeComments: false,
       removeEmptyAttributes: true,
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true
