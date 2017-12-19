@@ -15,7 +15,12 @@
 
 
 二、样式定制
-_bootstrap-config.scss：配置bootstrap中各组件的变量
+1.用_bootstrap-config.scss：配置bootstrap中各组件的变量
+	打开要模仿的网站，审查元素
+	用gulp serve调试网站，审查元素时可查看sass源码
+	通过对比目标网站，可确定sass变量的值
+2.不能用sass变量解决的，增加css来覆盖
+
 
 三、使用bootstrap的思路
 1.特殊设置
@@ -80,3 +85,7 @@ _bootstrap-config.scss：配置bootstrap中各组件的变量
 	图片 img  			响应式 .img-responsive	形状 .img-rounded / .img-circle / .img-thumbnail
 
 
+四、跑马灯组件
+1.引用jquery插件jquery.liMarquee
+2.它的bower.json有错误，需要修改main，填入要引用的js和css正确路径
+3.它依赖的jquery版本有点低，不需要固定，设置范围即可
