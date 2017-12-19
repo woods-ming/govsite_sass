@@ -51,6 +51,20 @@
   }
 }
 
+// 走马灯
+.str_wrap {
+  
+  
+  img {
+    border: 1px solid #eeeeee;
+    height: 116px;
+    width: 174px;
+    margin-right: 10px;
+    overflow: hidden;
+    padding: 2px;
+  }
+}
+
 // 内联列表
 .list-inline {
   li {
