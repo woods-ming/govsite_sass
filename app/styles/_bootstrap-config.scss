@@ -56,14 +56,14 @@ $font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
 $font-size-h1:            floor(($font-size-base * 2.6)); // ~36px
 $font-size-h2:            floor(($font-size-base * 2.15)); // ~30px
 $font-size-h3:            ceil(($font-size-base * 1.7)); // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h4:            $font-size-large; // ~16px
 $font-size-h5:            $font-size-base;
 $font-size-h6:            ceil(($font-size-base * 0.85)); // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        26px; // 30/14
+$line-height-base:        25px; // 30/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    42px; // ~20px
+$line-height-computed:    40px; // ~20px
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit;
@@ -329,7 +329,7 @@ $screen-md-max:              ($screen-lg-min - 1);
 //** Number of columns in the grid.
 $grid-columns:              12;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px;
+$grid-gutter-width:         15px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min;

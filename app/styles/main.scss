@@ -38,6 +38,37 @@
   }
 }
 
+// 新闻中心
+$news-center-height: 312px;
+.news-center {
+  height: $news-center-height;
+
+  .news-brief {
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px dashed #dbdbdb;
+
+    h4 {
+      margin: 0 auto 5px;
+
+      a {
+        color: #cc0000;
+      }
+    }
+
+    p {
+      text-indent: 1em;
+      font-size: $font-size-small;
+      margin: 0;
+    }
+  }
+
+  .tab-pane {
+    height: ($news-center-height - 49);
+    overflow: auto;
+  }
+}
+
 // 卡片
 .panel-default {
   .panel-heading {
@@ -52,18 +83,42 @@
 }
 
 // 走马灯
-.str_wrap {
-  
-  
-  img {
-    border: 1px solid #eeeeee;
-    height: 116px;
-    width: 174px;
-    margin-right: 10px;
-    overflow: hidden;
-    padding: 2px;
+$img-marquee-width: 180px;
+$a-marquee-width: ($img-marquee-width + 5);
+$div-marquee-width: ceil(($a-marquee-width * 6));
+.marquee {
+  padding: 16px 0 0 50px;
+  background: url(../images/marquee/title.png) no-repeat -1px -1px;
+  over-flow: hidden;
+  height: 176px;
+
+  .str_wrap .str_move {
+    background: #fff;
+    width: $div-marquee-width;
+
+    a {
+      display: block;
+      width: $a-marquee-width;
+      float: left;
+
+      img {
+        border: 1px solid #eeeeee;
+        height: 122px;
+        width: $img-marquee-width;
+        margin-right: 3px;
+        overflow: hidden;
+        padding: 2px;
+      }
+
+      span {
+        display: block;
+        font-size: 14px;
+        padding: 2px;
+      }
+    }
   }
 }
+
 
 // 内联列表
 .list-inline {
@@ -72,6 +127,14 @@
     a {
       padding: 0 10px;
     }
+  }
+}
+
+.list-unstyled {
+  padding: 0 10px;
+
+  li {
+    list-style-image: url(../images/li.jpg);
   }
 }
 
