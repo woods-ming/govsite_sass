@@ -22,6 +22,12 @@
   .dropdown-menu {
     min-width: 6em;
   }
+
+  .dropdown {
+    a {
+      //background-color: #b20000;
+    }
+  }
 }
 
 // 图片轮播
@@ -42,6 +48,33 @@
 $news-center-height: 312px;
 .news-center {
   height: $news-center-height;
+
+  .panel-heading {
+    padding: 0;
+
+    ul {
+      border: none;
+
+      li {
+        margin: 0;
+
+        a {
+          padding: 10px 15px;
+          line-height: 17px;
+          border: 0;
+          font-size: 16px;
+        }
+
+        a:hover,
+        a:focus {
+          color: #fff;
+          padding: 10px 15px;
+          line-height: 17px;
+          border: 0;
+        }
+      }
+    }
+  }
 
   .news-brief {
     padding-bottom: 0.5em;
@@ -64,8 +97,8 @@ $news-center-height: 312px;
   }
 
   .tab-pane {
-    height: ($news-center-height - 49);
-    overflow: auto;
+    height: ($news-center-height - 60);
+    overflow: auto; //padding-bottom: 12px;
   }
 }
 
@@ -145,4 +178,8 @@ footer {
   border-top: 3px #ce0b0b solid;
   padding: 15px 0px 10px 0px;
   font-size: $font-size-small;
+
+  p {
+    margin: 0;
+  }
 }
