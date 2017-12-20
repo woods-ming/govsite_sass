@@ -70,7 +70,9 @@ $news-center-height: 312px;
 }
 
 // 卡片
-.panel-default {
+.panel {
+  margin-bottom: 20px;
+
   .panel-heading {
     border-bottom: 2px solid #ce0b0b;
   }
