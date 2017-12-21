@@ -9,26 +9,19 @@
   padding: 0.2em 0;
 }
 
-// 横幅
-body {
+// 横幅图片
+$banner-height: 215px;
+.banner {
+  height: $banner-height;
+  width: 100%;
+  background: url(../images/bg.jpg) -300px -34px no-repeat #fff;
 
-  background: url(../images/bg.jpg) top center no-repeat #fff;
-
-  .banner {
-    margin: 0 auto;
-    height: 215px;
-    overflow: hidden;
-    width: 1100px;
-
-    .logo {
-      width: 478px;
-    height: 158px;
-    margin-top: 30px;
-    margin-left: 10px;
-    background: url(../images/logo1.png) no-repeat;
-    }
+  .logo {
+    height: $banner-height;
+    background: url(../images/logo1.png) 120px 30px no-repeat;
   }
 }
+
 
 // 导航菜单
 .navbar-default {
