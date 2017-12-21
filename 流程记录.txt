@@ -89,3 +89,6 @@
 1.引用jquery插件jquery.liMarquee
 2.它的bower.json有错误，需要修改main，填入要引用的js和css正确路径
 3.它依赖的jquery版本有点低，不需要固定，设置范围即可
+
+五、测试各种手机屏幕
+http://www.responsinator.com/

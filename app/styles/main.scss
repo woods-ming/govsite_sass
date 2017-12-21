@@ -9,14 +9,55 @@
   padding: 0.2em 0;
 }
 
+// 横幅
+body {
+
+  background: url(../images/bg.jpg) top center no-repeat #fff;
+
+  .banner {
+    margin: 0 auto;
+    height: 215px;
+    overflow: hidden;
+    width: 1100px;
+
+    .logo {
+      width: 478px;
+    height: 158px;
+    margin-top: 30px;
+    margin-left: 10px;
+    background: url(../images/logo1.png) no-repeat;
+    }
+  }
+}
+
 // 导航菜单
 .navbar-default {
-  background: url(../images/nav.jpg) left top repeat-x;
+  background: #b20000 url(../images/nav.jpg) left top repeat-x;
   padding: 0px 10px;
 
-  .navbar-nav>li {
-    background: url(../images/libg.jpg) right center no-repeat;
-    font-size: 16px;
+  .navbar-nav {
+
+    @media (max-width: 767px) {
+      .open .dropdown-menu > li > a {
+        line-height: $line-height-base;
+
+        &:hover,
+        &:focus {
+          color: #262626;
+          background-color: #f5f5f5;
+        }
+      }
+    }
+
+    >li {
+      background: url(../images/libg.jpg) right center no-repeat;
+      font-size: 16px;
+
+      a {
+        line-height: $line-height-base;
+        padding: 7px 15px;
+      }
+    }
   }
 
   .dropdown-menu {
@@ -47,8 +88,7 @@
 // 新闻中心
 $news-center-height: 312px;
 .news-center {
-  height: $news-center-height;
-
+  //height: $news-center-height;
   .panel-heading {
     padding: 0;
 
@@ -97,8 +137,8 @@ $news-center-height: 312px;
   }
 
   .tab-pane {
-    height: ($news-center-height - 60);
-    overflow: auto; //padding-bottom: 12px;
+    //height: ($news-center-height - 60);
+    //overflow: auto; 
   }
 }
 
