@@ -187,6 +187,11 @@ $div-marquee-width: ceil(($a-marquee-width * 6));
   }
 }
 
+// friend-link
+.friend-link {
+  background: url(../images/friend.png) 7px 0px no-repeat;
+  padding-left: 110px;
+}
 
 // 内联列表
 .list-inline {
