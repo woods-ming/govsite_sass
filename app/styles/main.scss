@@ -1,4 +1,4 @@
-@import "app/styles/_bootstrap-config.scss";
+@import "bootstrap-config";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 // 浏览器升级
@@ -14,7 +14,7 @@ $banner-height: 215px;
 .banner {
   height: $banner-height;
   width: 100%;
-  background: url(../images/bg.jpg) -300px -34px no-repeat #fff;
+  background: url(../images/banner.jpg) -300px -34px no-repeat #fff;
 
   .logo {
     height: $banner-height;
@@ -22,10 +22,9 @@ $banner-height: 215px;
   }
 }
 
-
 // 导航菜单
 .navbar-default {
-  background: #b20000 url(../images/nav.jpg) left top repeat-x;
+  background: #b20000 url(../images/nav/nav-bar-bg.jpg) left top repeat-x;
   padding: 0px 10px;
 
   .navbar-nav {
@@ -43,7 +42,7 @@ $banner-height: 215px;
     }
 
     >li {
-      background: url(../images/libg.jpg) right center no-repeat;
+      background: url(../images/nav/nav-split.jpg) right center no-repeat;
       font-size: 16px;
 
       a {
@@ -55,12 +54,6 @@ $banner-height: 215px;
 
   .dropdown-menu {
     min-width: 6em;
-  }
-
-  .dropdown {
-    a {
-      //background-color: #b20000;
-    }
   }
 }
 
@@ -144,8 +137,13 @@ $news-center-height: 312px;
   }
 
   .panel-body {
-    ul {
+    .list-unstyled {
       margin: 0;
+      padding: 0 10px;
+
+      li {
+        list-style-image: url(../images/list-style.jpg);
+      }
     }
   }
 }
@@ -200,14 +198,6 @@ $div-marquee-width: ceil(($a-marquee-width * 6));
     a {
       padding: 0 10px;
     }
-  }
-}
-
-.list-unstyled {
-  padding: 0 10px;
-
-  li {
-    list-style-image: url(../images/li.jpg);
   }
 }
 
