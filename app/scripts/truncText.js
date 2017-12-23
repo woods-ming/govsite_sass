@@ -6,6 +6,8 @@
   var TruncText = function(element, options) {
     this.$element = $(element)
     this.options = $.extend({}, TruncText.DEFAULTS, options)
+    this.title = this.$element.text()
+    this.$element.attr('title', this.title)
   };
 
   TruncText.DEFAULTS = {
@@ -14,18 +16,21 @@
   }
 
   TruncText.prototype.trunc = function() {
+    var text = this.$element.text();
+
     if (this.$element.height() > this.options.singleHeight) {
-      var num = this.$element.width() / parseInt(this.options.fontSize) - 2;
-
-      var text = this.$element.text();
-      var title = this.$element.attr('title');
-      if (title) {
-        text = title;
-      } else {
-        this.$element.attr('title', text);
-      }
-
+      var num = this.$element.width() / parseInt(this.options.fontSize) - 1;
       this.$element.text(text.slice(0, num) + '...');
+    } else {
+      if (text.indexOf('...')) {
+        var standardWidth = this.$element.parent().width() - this.$element.siblings().width();
+        if (this.title.length * parseInt(this.options.fontSize) <= standardWidth) {
+          this.$element.text(this.title);
+        } else {
+          var num = standardWidth / parseInt(this.options.fontSize) - 1;
+          this.$element.text(this.title.slice(0, num) + '...');
+        }
+      }
     }
   };
 
