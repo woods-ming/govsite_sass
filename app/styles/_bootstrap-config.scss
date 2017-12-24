@@ -363,7 +363,7 @@ $container-lg:                 $container-large-desktop;
 
 // Basics of a navbar
 $navbar-height:                    42px;
-$navbar-margin-bottom:             $line-height-computed;
+$navbar-margin-bottom:             20px;
 $navbar-border-radius:             0;
 $navbar-padding-horizontal:        0;
 $navbar-padding-vertical:          0;
@@ -792,8 +792,8 @@ $badge-border-radius:         10px;
 //
 //##
 
-$breadcrumb-padding-vertical:   8px;
-$breadcrumb-padding-horizontal: 15px;
+$breadcrumb-padding-vertical:   0px;
+$breadcrumb-padding-horizontal: 0px;
 //** Breadcrumb background color
 $breadcrumb-bg:                 #f5f5f5;
 //** Breadcrumb text color
@@ -801,7 +801,7 @@ $breadcrumb-color:              #ccc;
 //** Text color of current page in the breadcrumb
 $breadcrumb-active-color:       $gray-light;
 //** Textual separator for between breadcrumb elements
-$breadcrumb-separator:          "/";
+$breadcrumb-separator:          ">";
 
 
 //== Carousel

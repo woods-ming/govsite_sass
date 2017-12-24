@@ -57,6 +57,48 @@ $banner-height: 215px;
   }
 }
 
+// 左侧子导航
+.left-nav {
+  .title {
+    color: #fff;
+    background: #CE0A0B url(../images/nav/left-nav-bg.jpg) no-repeat;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 40px;
+    @include border-top-radius($border-radius-large);
+  }
+
+  li {
+    border-bottom: 1px dashed #dcdcdc;
+
+    a {
+      font-size: 14px;
+      font-weight: normal;
+      color: #444;
+      height: 45px;
+      line-height: 45px;
+      display: block;
+      text-align: left;
+      text-indent: 50px;
+      &:hover {
+        background: url(../images/nav/caret.png) 20px 17px no-repeat;
+      }
+    }
+  }
+}
+
+// 面包屑导航
+.breadcrumb {
+  margin: 0px;
+
+  .glyphicon-home {
+    color: #CE0A0B;
+  }
+}
+
+
 // 图片轮播
 .carousel-caption {
   left: 0;
@@ -120,11 +162,6 @@ $news-center-height: 312px;
       font-size: $font-size-small;
       margin: 0;
     }
-  }
-
-  .tab-pane {
-    //height: ($news-center-height - 60);
-    //overflow: auto; 
   }
 }
 
@@ -209,5 +246,29 @@ footer {
 
   p {
     margin: 0;
+  }
+}
+
+// 文章
+.article {
+ 
+
+  h3 {
+    color: #cc0000;
+    margin: 20px;
+  }
+  p {
+    font-size: 16px;
+    margin: 20px;
+    text-indent: 2em;
+    text-align: left;
+  }
+  img {
+      width: 50%;
+    }
+  .pictrue {
+    p {
+      text-align: center;
+    }
   }
 }
