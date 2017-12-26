@@ -1,34 +1,42 @@
+/* ========================================================================
+ * truncText.js v1.0.0
+ * https://github.com/woods-ming/truncText.js
+ * ========================================================================
+ * Last Update 2017.12.26
+ * Licensed under MIT
+ * ======================================================================== */
+
+
 + function($) {
   'use strict';
 
   /* TruncText CLASS DEFINITION
    * ========================= */
+
   var TruncText = function(element, options) {
-    this.$element = $(element)
     this.options = $.extend({}, TruncText.DEFAULTS, options)
+
+    this.$element = $(element)
+    this.fontSize = parseInt(this.$element.css('font-size').replace('px', ''))
+    this.singleHeight = 2 * this.fontSize
     this.title = this.$element.text()
     this.$element.attr('title', this.title)
   };
 
-  TruncText.DEFAULTS = {
-    singleHeight: 20,
-    fontSize: 14
-  }
-
   TruncText.prototype.trunc = function() {
     var text = this.$element.text();
 
-    if (this.$element.height() > this.options.singleHeight) {
-      var num = this.$element.width() / parseInt(this.options.fontSize) - 1;
-      this.$element.text(text.slice(0, num) + '...');
+    if (this.$element.height() >= this.singleHeight) {
+      var num = this.$element.width() / this.fontSize - 1
+      this.$element.text(text.slice(0, num) + '...')
     } else {
       if (text.indexOf('...')) {
         var standardWidth = this.$element.parent().width() - this.$element.siblings().width();
-        if (this.title.length * parseInt(this.options.fontSize) <= standardWidth) {
-          this.$element.text(this.title);
+        if (this.title.length * this.fontSize <= standardWidth) {
+          this.$element.text(this.title)
         } else {
-          var num = standardWidth / parseInt(this.options.fontSize) - 1;
-          this.$element.text(this.title.slice(0, num) + '...');
+          var num = standardWidth / this.fontSize - 1
+          this.$element.text(this.title.slice(0, num) + '...')
         }
       }
     }
@@ -39,25 +47,25 @@
   function Plugin(option) {
     return this.each(function() {
       var $this = $(this)
-      var data = $this.data('bs.TruncText')
+      var data = $this.data('truncText')
       var options = typeof option == 'object' && option
 
-      if (!data) $this.data('bs.TruncText', (data = new TruncText(this, options)))
+      if (!data) $this.data('truncText', (data = new TruncText(this, options)))
 
-      data.trunc();
-    });
+      data.trunc()
+    })
   }
 
-  var old = $.fn.TruncText;
+  var old = $.fn.truncText
 
-  $.fn.TruncText = Plugin;
-  $.fn.TruncText.Constructor = TruncText;
+  $.fn.truncText = Plugin
+  $.fn.truncText.Constructor = TruncText
 
   // TruncText NO CONFLICT
   // =================
-  $.fn.TruncText.noConflict = function() {
-    $.fn.TruncText = old;
-    return this;
-  };
+  $.fn.truncText.noConflict = function() {
+    $.fn.truncText = old
+    return this
+  }
 
-}(jQuery);
+}(jQuery)

@@ -7,6 +7,11 @@
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+
+  a {
+    font-weight: bold;
+    color: #fff;
+  }
 }
 
 // 横幅图片
@@ -61,7 +66,7 @@ $banner-height: 215px;
 .left-nav {
   .title {
     color: #fff;
-    background: #CE0A0B url(../images/nav/left-nav-bg.jpg) no-repeat;
+    background: #CE0A0B url(../images/nav/left-nav-bg.png) 10px no-repeat;
     height: 45px;
     line-height: 45px;
     font-size: 16px;
@@ -70,21 +75,29 @@ $banner-height: 215px;
     @include border-top-radius($border-radius-large);
   }
 
-  li {
-    border-bottom: 1px dashed #dcdcdc;
+  .list-unstyled {
+    border: 1px solid #ddd;
 
-    a {
-      font-size: 14px;
-      font-weight: normal;
-      color: #444;
-      height: 45px;
-      line-height: 45px;
-      display: block;
-      text-align: left;
-      text-indent: 50px;
-      &:hover {
-        background: url(../images/nav/caret.png) 20px 17px no-repeat;
+    li {
+      border-bottom: 1px dashed #dcdcdc;
+
+      a {
+        font-size: 14px;
+        font-weight: normal;
+        color: #444;
+        height: 45px;
+        line-height: 45px;
+        display: block;
+        text-align: left;
+        text-indent: 50px;
+        &:hover {
+          background: url(../images/nav/caret.png) 20px 17px no-repeat;
+        }
       }
+    }
+
+    li:last-child {
+      border-bottom: none;
     }
   }
 }
@@ -95,6 +108,7 @@ $banner-height: 215px;
 
   .glyphicon-home {
     color: #CE0A0B;
+    margin-right: 0.5em;
   }
 }
 
@@ -114,9 +128,7 @@ $banner-height: 215px;
 }
 
 // 新闻中心
-$news-center-height: 312px;
 .news-center {
-  //height: $news-center-height;
   .panel-heading {
     padding: 0;
 
@@ -251,8 +263,6 @@ footer {
 
 // 文章
 .article {
- 
-
   h3 {
     color: #cc0000;
     margin: 20px;
@@ -264,8 +274,8 @@ footer {
     text-align: left;
   }
   img {
-      width: 50%;
-    }
+    width: 50%;
+  }
   .pictrue {
     p {
       text-align: center;

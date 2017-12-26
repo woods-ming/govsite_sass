@@ -90,12 +90,15 @@
 2.它的bower.json有错误，需要修改main，填入要引用的js和css正确路径
 3.它依赖的jquery版本有点低，不需要固定，设置范围即可
 
+
 五、长文本截断组件
-1.引用three-dots.js
+1.自己编写truncText并加入github和jquery插件
 
 
-六、测试各种手机屏幕
-http://www.responsinator.com/
+六、工具
+1.测试各种手机屏幕 http://www.responsinator.com/
+2.图片背景透明化 在ppt内插入图片，选择透明化，再另存
+
 
 七、总结
 1.组件化元素
